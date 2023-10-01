@@ -1,0 +1,730 @@
+/* impor font dari GoogleFonts */
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600;900&family=Open+Sans:wght@400;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #f1f1f1;
+  /* Track color */
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  position: relative;
+  display: block;
+  background: #555;
+  border: #000 solid;
+  opacity: 0;
+  border-radius: 6px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  background-color: #b2e99d;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 0px 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  color: #000;
+  font-weight: bolder;
+}
+
+nav ul li::after {
+  display: block;
+  content: "";
+  height: 2px;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: 0.6s ease;
+}
+
+nav ul li:hover::after {
+  transform: scaleX(1);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* bagian tag <body> */
+body {
+  background: #b2e99d;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+/* bagian tag <img> */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: auto;
+}
+
+/* bagian class button-container */
+.button-container {
+  text-align: right;
+}
+
+button {
+  margin: 0 5px;
+  background: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0px 0px #000;
+  cursor: pointer;
+}
+
+button.green {
+  background: green;
+  color: #fff;
+}
+
+button.btn-primary {
+  background-color: #007bff;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #000;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  margin: 0 5px;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0px 0px #000;
+  cursor: pointer;
+}
+
+/* Hover effect for the button */
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.form-style {
+  width: 100%;
+  background: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0px 0px #000;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.form-sub-title {
+  font-weight: 600;
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 20px;
+}
+
+.form-style:focus,
+.btn-form-submit:focus {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #000;
+}
+
+.btn-form-submit {
+  padding: 15px;
+  margin: 40px;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 30px;
+}
+
+/* bagian class card */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  filter: drop-shadow(8px 8px 0px black);
+  padding: 20px;
+  border: 4px solid #000;
+}
+
+.card-noshadow {
+  background: #fff;
+  border-radius: 20px;
+  /* filter: drop-shadow(8px 8px 0px green); */
+  padding: 20px;
+  border: 4px solid #000;
+}
+
+.card a:link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.card a:visited {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.card a:active {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #000;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* bagian class card-container */
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* Tengahkan elemen card-container */
+}
+
+/* bagian class card-content */
+.card-content {
+  width: 100%;
+  padding: 24px;
+}
+
+/* bagian h1 yang ada dalam class card */
+.card h1 {
+  margin: 0;
+  font-size: 42px;
+  letter-spacing: 2px;
+  /* width: 48%; */
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 35px;
+  letter-spacing: 2px;
+  /* width: 48%; */
+}
+
+/* bagian p yang ada dalam class card */
+.card p {
+  font-size: 25px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* bagian class card-image */
+.card-image {
+  flex-basis: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* bagian tag img yang ada class card-image */
+.card-image img {
+  /* height: 100%; */
+  object-fit: scale-down;
+}
+
+/* bagian class container */
+.container {
+  margin: 100px auto;
+  max-width: 1320px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* bagian class tright */
+.tright {
+  padding-left: 20px;
+}
+
+.section {
+  /* border-bottom: 2px solid #000; */
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.container .skill-box {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.skill-box .skill-bar {
+  height: 15px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background: #f9b409;
+  animation: progress 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.image-about {
+  box-shadow: 5px 5px 0px 0px #000;
+  border-radius: 20px;
+  width: 75%;
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #f9b409;
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background-color: #f9b409;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 20px;
+}
+
+/* Container around content */
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #b2e99d;
+  border: 4px solid black;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.timeline-left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.timeline-right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.timeline-left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #000;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #000;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeline-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #000;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #000 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline-right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.timeline-content {
+  padding: 20px 30px;
+  background-color: #b2e99d;
+  position: relative;
+  border-radius: 6px;
+  border: #000 solid;
+}
+
+.form-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.img-porto {
+  border: #000 solid;
+  border-radius: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 1em; */
+  /* align-items: center; */
+}
+
+.row .col {
+  display: flex;
+  padding: 10px;
+  text-align: justify;
+}
+
+.row .col-1 {
+  width: 8.33333%;
+}
+
+.row .col-2 {
+  width: 16.6667%;
+}
+
+.row .col-3 {
+  width: 25%;
+}
+
+.row .col-4 {
+  width: 33.3333%;
+}
+
+.row .col-5 {
+  width: 41.6667%;
+}
+
+.row .col-6 {
+  width: 50%;
+}
+
+.row .col-7 {
+  width: 58.3333%;
+}
+
+.row .col-8 {
+  width: 66.6667%;
+}
+
+.row .col-9 {
+  width: 75%;
+}
+
+.row .col-10 {
+  width: 83.3333%;
+}
+
+.row .col-11 {
+  width: 91.6667%;
+}
+
+.row .col-12 {
+  width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 16px 30px;
+  }
+
+  nav h1 {
+    font-size: 24px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .container {
+    margin: 50px auto;
+  }
+
+  .card {
+    margin: 20px;
+  }
+
+  /* Sembunyikan menu saat lebar layar lebih kecil dari 768px */
+  nav ul {
+    display: none;
+  }
+
+  /* Tampilkan tombol tampilan menu */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    padding: 16px;
+  }
+
+  nav h1 {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    padding: 5px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  .container {
+    margin: 30px auto;
+  }
+
+  .row .col {
+    padding: 10px;
+    text-align: justify;
+    width: 100%;
+  }
+
+  .card {
+    margin: 20px;
+  }
+}
+
+/* Tampilkan menu saat tombol tampilan menu diklik */
+.show-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0%;
+
+  /* Atur posisi menu dropdown sesuai kebutuhan Anda */
+  right: 0;
+  background-color: #b2e99d;
+  z-index: 1;
+  /* border-radius: 20px; */
+  /* border: #000 4px solid; */
+}
+
+nav ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+  color: #000;
+  font-weight: bolder;
+}
